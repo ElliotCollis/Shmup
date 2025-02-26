@@ -6,7 +6,7 @@ public class CanvasManager : MonoBehaviour // simple script for swapping UI canv
 {
     public void SwapCanvas (GameObject TurnOff, GameObject TurnOn) // takes in one canvas to turn off and one to turn on.
     {
-        TurnOff?.SetActive(false);
+        TurnOff?.SetActive(false); // here we use the null-conditional operator instead of an if null reference check. 
         TurnOn?.SetActive(true);
     }
 }
