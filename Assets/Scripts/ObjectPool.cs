@@ -12,7 +12,7 @@ public class ObjectPool : MonoBehaviour // not used in this project, but good to
 
 	public List<GameObject> pooledObjects => _pooledObjects; // public getter for our pooled objects.
 
-	void Start()
+	public void Init() // initalise the object pool
 	{
 		_pooledObjects = new List<GameObject>(pooledAmount); // set the list empty. 
 		for (int i = 0; i < pooledAmount; i++) // use a for loop to fill it up. This runs the code inside the number of pooled amount times.

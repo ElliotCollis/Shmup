@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour // this controls the player positi
             shotPool = gameObject.AddComponent<ObjectPool>();
             shotPool.pooledObject = _shotObject;
             shotPool.pooledAmount = 50;
+            shotPool.Init();
         }
     }
 

@@ -65,7 +65,15 @@ public class GameManager : MonoBehaviour // this manages all the systems in the 
             SpawnPickUp(Vector3.zero); //spawn a pick up at 0, 0, 0
         }
     }
-    
+
+    public void PopulateObjectPools () // populate all our object pools with gameobjects ready to go.
+    {
+        _enemyPool.Init();
+        _rockPool.Init();
+        _pickUpPool.Init();
+    }
+
+
     public PlayerController SpawnPlayer () // spawn our player
     {
        if(_player == null) // if we don't have a player in the game instantiate one.

@@ -48,6 +48,7 @@ public class Begin : MonoBehaviour // this controls the begining of the game and
     {
         beginCountdown = true;
         //sets up the game scene
+        GameManager.instance.PopulateObjectPools(); // runs init on all the object pools
         PlayerController player = GameManager.instance.SpawnPlayer(); // get the player
         player.inControl = true; // make sure the player is in control
         player.GetComponent<PlayerHealth>().StartIFrames(); // give the player some starting invincability just in case.
